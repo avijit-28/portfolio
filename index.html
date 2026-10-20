@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avijit Pakhira | AI/ML Engineer & Researcher</title>
+  
+  <!-- Meta tags for SEO & Social Preview -->
+  <meta name="description" content="Portfolio of Avijit Pakhira — AI/ML Engineer, Computer Vision Specialist, and Springer-Published Researcher. Specializing in Deep Learning, GenAI, and Intelligent Systems.">
+  <meta name="keywords" content="Avijit Pakhira, AI Engineer, Machine Learning, Computer Vision, Deep Learning, JIS University, Springer, Python, Django">
+  <meta name="author" content="Avijit Pakhira">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="profile.jpg">
+
+  <!-- Google Fonts: Syne (Cyber/Display) + JetBrains Mono (Tech) + Plus Jakarta Sans (Clean Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================
+       PRELOADER / OPENING STYLE
+  ======================================================== -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-bg-grid"></div>
+    <div class="preloader-content">
+      <div class="preloader-logo-ring">
+        <div class="ring-core">
+          <span class="ring-symbol">AP</span>
+        </div>
+        <div class="orbital-ring ring-1"></div>
+        <div class="orbital-ring ring-2"></div>
+        <div class="orbital-ring ring-3"></div>
+      </div>
+
+      <div class="preloader-title-wrap">
+        <h2 class="preloader-name">AVIJIT PAKHIRA</h2>
+        <div class="preloader-subtitle">NEURAL SYSTEM INITIALIZATION</div>
+      </div>
+
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar">
+          <div id="preloaderProgress" class="preloader-progress"></div>
+        </div>
+        <div class="preloader-metrics">
+          <span id="preloaderStatusText" class="preloader-status">Booting kernel modules...</span>
+          <span id="preloaderPercent" class="preloader-percent">0%</span>
+        </div>
+      </div>
+
+      <div class="preloader-terminal">
+        <div class="terminal-line"><span class="t-prompt">&gt;</span> <span id="terminalLine">Initializing hardware acceleration...</span></div>
+      </div>
+
+      <button id="preloaderSkip" class="preloader-skip-btn">
+        ENTER NOW <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Background Interactive Neural Network Canvas -->
+  <canvas id="neuralCanvas"></canvas>
+
+  <!-- Ambient Glow Blobs -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- Custom Cursor Glow -->
+  <div id="cursorGlow"></div>
+  <div id="cursorDot"></div>
+
+  <!-- ========================================================
+       NAVIGATION BAR
+  ======================================================== -->
+  <nav id="mainNav" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-badge">AP</span>
+        <span class="logo-text">AVIJIT<span class="accent-dot">.</span>AI</span>
+      </a>
+
+      <div class="nav-center">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+          <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+          <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+          <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+          <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+          <li><a href="#research" class="nav-link" data-section="research">Research</a></li>
+          <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+          <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Command Palette Trigger Button -->
+        <button id="cmdPaletteBtn" class="nav-icon-btn cmd-btn" title="Quick Navigation (Ctrl+K)">
+          <i class="fas fa-terminal"></i>
+          <span class="kbd-hint"><kbd>⌘</kbd><kbd>K</kbd></span>
+        </button>
+
+        <!-- Sound FX Toggle Button -->
+        <button id="soundToggleBtn" class="nav-icon-btn" title="Toggle UI Audio Synth">
+          <i class="fas fa-volume-high"></i>
+        </button>
+<!-- https://drive.google.com/file/d/11c-2tHDlnOW8mPERKGlj8OP8Jjxf7sSf/view?usp=drive_link -->
+        <!-- Resume Download CTA -->
+        <a href="https://drive.google.com/uc?export=download&id=11c-2tHDlnOW8mPERKGlj8OP8Jjxf7sSf" target="_blank" class="nav-cta-btn">
+          <i class="fas fa-file-pdf"></i>
+          <span>Resume</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuToggle" class="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileDrawer" class="mobile-drawer">
+    <div class="drawer-header">
+      <span class="drawer-title">Navigation</span>
+      <button id="mobileDrawerClose" class="drawer-close"><i class="fas fa-xmark"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#hero" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#research" class="mobile-link">Research</a></li>
+      <li><a href="#education" class="mobile-link">Education</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="https://drive.google.com/uc?export=download&id=1atUz9oFpYv6dJkmnclmP7gvQ96bGvcub" target="_blank" class="btn-primary w-full">
+        <i class="fas fa-file-pdf"></i> Download Resume
+      </a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ========================================================
+         HERO SECTION
+    ======================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <!-- Availability Pill -->
+          <div class="hero-status-pill reveal">
+            <span class="status-indicator"></span>
+            <span class="status-text">Available for AI/ML Roles & Research</span>
+            <span class="cgpa-pill-badge">CGPA 9.41</span>
+          </div>
+
+          <!-- Main Hero Headings -->
+          <h1 class="hero-title reveal">
+            Hello, I'm <br>
+            <span class="hero-gradient-text">Avijit Pakhira</span>
+          </h1>
+
+          <!-- Typing Dynamic Subtitle -->
+          <div class="hero-typing-wrap reveal">
+            <span class="typing-prefix">&gt; </span>
+            <span id="heroTypedText" class="typed-text"></span>
+            <span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-description reveal">
+            AI/ML Engineer & Researcher specializing in <strong>Computer Vision, Deep Learning</strong>, and <strong>Generative AI</strong>. Author of 2 Springer conference publications, building cutting-edge predictive systems, intelligent automation, and clinical diagnostic tools with a passion for high-impact innovation.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions reveal">
+            <a href="#projects" class="btn-primary">
+              <i class="fas fa-cubes"></i> Explore Projects
+            </a>
+            <a href="https://drive.google.com/uc?export=download&id=1atUz9oFpYv6dJkmnclmP7gvQ96bGvcub" target="_blank" class="btn-secondary">
+              <i class="fas fa-arrow-down-to-line"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn-outline">
+              <i class="fas fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-social-row reveal">
+            <span class="social-label">Connect:</span>
+            <a href="https://github.com/avijit-28" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/avijit-pakhira-8541841ba" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:avijitpakhira2807@gmail.com" class="social-icon-btn" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+917044419685" class="social-icon-btn" title="Phone">
+              <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://www.instagram.com/avijit_official_28" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+
+          <!-- Stat Counters -->
+          <div class="hero-stats-grid reveal">
+            <div class="stat-card">
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="9.41" data-decimals="2">0</span>
+                <span class="stat-unit">/10</span>
+              </div>
+              <span class="stat-caption">B.Tech CGPA</span>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="16" data-decimals="0">0</span>
+                <span class="stat-unit">+</span>
+              </div>
+              <span class="stat-caption">Projects Engineered</span>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="2" data-decimals="0">0</span>
+                <span class="stat-unit"></span>
+              </div>
+              <span class="stat-caption">Springer Publications</span>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="3" data-decimals="0">0</span>
+                <span class="stat-unit"></span>
+              </div>
+              <span class="stat-caption">Industry Internships</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right: Interactive 3D Holographic Card & Avatar -->
+        <div class="hero-visual reveal">
+          <div class="avatar-perspective-wrap" id="avatarCard">
+            <div class="hologram-ring ring-outer"></div>
+            <div class="hologram-ring ring-inner"></div>
+
+            <div class="avatar-card-frame">
+              <div class="avatar-image-container">
+                <img src="profile.jpg" alt="Avijit Pakhira" class="avatar-photo" onerror="this.onerror=null; this.src='avi.jpg';">
+                <div class="avatar-overlay-scan"></div>
+              </div>
+              
+              <div class="avatar-meta-tag">
+                <div class="meta-dot"></div>
+                <div class="meta-info">
+                  <span class="meta-name">Avijit Pakhira</span>
+                  <span class="meta-role">AI / ML Engineer</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Tech Badges -->
+            <div class="float-badge fb-top-right">
+              <i class="fas fa-brain text-cyan"></i>
+              <span>Deep Learning</span>
+            </div>
+            <div class="float-badge fb-top-left">
+              <i class="fas fa-eye text-violet"></i>
+              <span>AI & ML </span>
+            </div>
+            <div class="float-badge fb-bottom-right">
+              <i class="fas fa-chart-line text-amber"></i>
+              <span>Computer Vision</span>
+            </div>
+            <!-- <div class="float-badge fb-top-left">
+              <i class="fas fa-award text-emerald"></i>
+              <span>9.41 CGPA</span>
+            </div> -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TECH STACK MARQUEE
+    ======================================================== -->
+    <div class="marquee-section">
+      <div class="marquee-track-wrap">
+        <div class="marquee-track" id="marqueeTrack1">
+          <!-- Populated by JavaScript with modern tech badges -->
+        </div>
+      </div>
+      <div class="marquee-track-wrap reverse">
+        <div class="marquee-track" id="marqueeTrack2">
+          <!-- Reverse direction track -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         ABOUT SECTION
+    ======================================================== -->
+    <section id="about" class="section">
+      <div class="container">
+        
+        <div class="section-heading text-center reveal">
+          <span class="section-tag"><i class="fas fa-user-astronaut"></i> PROFILE NARRATIVE</span>
+          <h2 class="section-title">Architecting <span>Intelligent Systems</span></h2>
+          <p class="section-subtitle">A fusion of empirical research, deep learning rigor, and real-world software engineering.</p>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Left: Narrative Text -->
+          <div class="about-text-card glass-panel reveal">
+            <h3 class="card-subtitle"><i class="fas fa-terminal text-cyan"></i> Background & Vision</h3>
+            <p>
+              I am an AI/ML Engineer with a relentless curiosity for how machine intelligence can solve mission-critical real-world problems. Currently pursuing my <strong>B.Tech in Computer Science and Engineering (AI/ML specialization)</strong> at <strong>JIS University</strong> with an exceptional <strong>9.41 CGPA</strong>.
+            </p>
+            <p>
+              My research footprint includes publications at <strong>Springer</strong> international conferences, notably on applying ancient <em>Vedic Mathematics & Karatsuba multiplication</em> to accelerate CNN-based face recognition pipelines, as well as multi-sensor precision agriculture optimization.
+            </p>
+            <p>
+              From engineering real-time <strong>YOLO object detection</strong> with low edge latency, to developing <strong>quantitative algorithmic trading bots</strong>, <strong>NLP ticket triage engines</strong>, and <strong>clinical diagnostic portals</strong>, I pride myself on turning theoretical mathematical models into production-ready software.
+            </p>
+
+            <div class="about-pillars">
+              <div class="pillar-item">
+                <i class="fas fa-eye"></i>
+                <span>Computer Vision</span>
+              </div>
+              <div class="pillar-item">
+                <i class="fas fa-microchip"></i>
+                <span>Deep Learning & GenAI</span>
+              </div>
+              <div class="pillar-item">
+                <i class="fas fa-network-wired"></i>
+                <span>Workflow Automation</span>
+              </div>
+              <div class="pillar-item">
+                <i class="fas fa-chart-pie"></i>
+                <span>Quantitative Modeling</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: System Info & Quick Metrics -->
+          <div class="about-info-column reveal">
+            <div class="terminal-widget glass-panel">
+              <div class="terminal-top-bar">
+                <div class="term-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="term-title">avijit@neural-core:~$ neofetch</span>
+              </div>
+              <div class="terminal-body font-mono">
+                <p><span class="term-key">ENGINEER:</span> <span class="term-val">Avijit Pakhira</span></p>
+                <p><span class="term-key">CURRENT DEGREE:</span> <span class="term-val">B.Tech CSE (AI & ML)</span></p>
+                <p><span class="term-key">INSTITUTION:</span> <span class="term-val">JIS University, Kolkata</span></p>
+                <p><span class="term-key">ACADEMIC STANDING:</span> <span class="term-val text-cyan">9.41 / 10.0 CGPA</span></p>
+                <p><span class="term-key">RESEARCH IMPACT:</span> <span class="term-val text-violet">Springer Indexed Author</span></p>
+                <p><span class="term-key">CORE SPECIALTY:</span> <span class="term-val">CV, Deep Learning, GenAI, Full-Stack</span></p>
+                <p><span class="term-key">CERTIFICATIONS:</span> <span class="term-val">Oracle GenAI Certified, NPTEL IIT</span></p>
+                <p><span class="term-key">LOCATION:</span> <span class="term-val">West Bengal, India (Open to Remote/Relocate)</span></p>
+                <p><span class="term-key">CONTACT:</span> <span class="term-val">avijitpakhira2807@gmail.com</span></p>
+                <p class="term-cursor">&gt; SYSTEM OPERATIONAL. READY FOR INNOVATION_</p>
+              </div>
+            </div>
+
+            <!-- Key Highlights Box -->
+            <div class="quick-highlights-grid">
+              <div class="highlight-box">
+                <div class="hl-icon"><i class="fas fa-code-commit"></i></div>
+                <div>
+                  <h4>Production Mindset</h4>
+                  <p>Scalable APIs, Clean Code & Modular Architectures</p>
+                </div>
+              </div>
+              <div class="highlight-box">
+                <div class="hl-icon"><i class="fas fa-book-open"></i></div>
+                <div>
+                  <h4>Research-Driven</h4>
+                  <p>Translating academic papers into functioning tools</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SKILLS MATRIX
+    ======================================================== -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        
+        <div class="section-heading text-center reveal">
+          <span class="section-tag"><i class="fas fa-layer-group"></i> TECHNICAL CAPABILITIES</span>
+          <h2 class="section-title">My Technical <span>Arsenal</span></h2>
+          <p class="section-subtitle">Carefully honed tools, frameworks, and foundational computer science competencies.</p>
+        </div>
+
+        <div class="skills-category-grid">
+          
+          <!-- Category 1: Languages -->
+          <div class="skill-category-card glass-panel reveal">
+            <div class="category-header">
+              <div class="cat-icon cat-cyan"><i class="fas fa-code"></i></div>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-tag-cloud">
+              <span class="tech-chip highlight"><i class="fab fa-python"></i> Python</span>
+              <span class="tech-chip"><i class="fas fa-code"></i> C++</span>
+              <span class="tech-chip"><i class="fas fa-c"></i> C</span>
+              <span class="tech-chip"><i class="fab fa-js"></i> JavaScript</span>
+              <span class="tech-chip"><i class="fas fa-database"></i> SQL</span>
+              <span class="tech-chip"><i class="fab fa-php"></i> PHP</span>
+              <span class="tech-chip"><i class="fab fa-html5"></i> HTML5</span>
+              <span class="tech-chip"><i class="fab fa-css3-alt"></i> CSS3</span>
+              <span class="tech-chip"><i class="fas fa-square-root-variable"></i> LaTeX</span>
+            </div>
+          </div>
+
+          <!-- Category 2: AI / ML & Deep Learning -->
+          <div class="skill-category-card glass-panel reveal">
+            <div class="category-header">
+              <div class="cat-icon cat-violet"><i class="fas fa-brain"></i></div>
+              <h3>AI, ML & Deep Learning</h3>
+            </div>
+            <div class="skill-tag-cloud">
+              <span class="tech-chip highlight"><i class="fas fa-network-wired"></i> PyTorch</span>
+              <span class="tech-chip highlight"><i class="fas fa-cubes"></i> TensorFlow / Keras</span>
+              <span class="tech-chip highlight"><i class="fas fa-eye"></i> OpenCV</span>
+              <span class="tech-chip"><i class="fas fa-crosshairs"></i> YOLOv3 / YOLOv8</span>
+              <span class="tech-chip"><i class="fas fa-robot"></i> Scikit-Learn</span>
+              <span class="tech-chip"><i class="fas fa-table"></i> Pandas & NumPy</span>
+              <span class="tech-chip"><i class="fas fa-chart-line"></i> Matplotlib & Seaborn</span>
+              <span class="tech-chip"><i class="fas fa-comment-dots"></i> NLP & Transformers</span>
+              <span class="tech-chip"><i class="fas fa-wand-magic-sparkles"></i> Generative AI & LLMs</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Frameworks & Web -->
+          <div class="skill-category-card glass-panel reveal">
+            <div class="category-header">
+              <div class="cat-icon cat-amber"><i class="fas fa-server"></i></div>
+              <h3>Frameworks & Full-Stack</h3>
+            </div>
+            <div class="skill-tag-cloud">
+              <span class="tech-chip highlight"><i class="fab fa-python"></i> Django</span>
+              <span class="tech-chip highlight"><i class="fas fa-bolt"></i> Streamlit</span>
+              <span class="tech-chip"><i class="fas fa-chart-pie"></i> Gradio</span>
+              <span class="tech-chip"><i class="fab fa-node-js"></i> Node.js</span>
+              <span class="tech-chip"><i class="fab fa-bootstrap"></i> Bootstrap 5</span>
+              <span class="tech-chip"><i class="fas fa-wind"></i> Tailwind CSS</span>
+              <span class="tech-chip"><i class="fas fa-plug"></i> REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Cloud & Databases -->
+          <div class="skill-category-card glass-panel reveal">
+            <div class="category-header">
+              <div class="cat-icon cat-emerald"><i class="fas fa-database"></i></div>
+              <h3>Databases & Cloud</h3>
+            </div>
+            <div class="skill-tag-cloud">
+              <span class="tech-chip"><i class="fas fa-leaf"></i> MongoDB</span>
+              <span class="tech-chip"><i class="fas fa-database"></i> MySQL</span>
+              <span class="tech-chip"><i class="fas fa-box-archive"></i> SQLite</span>
+              <span class="tech-chip"><i class="fas fa-fire"></i> Firebase</span>
+              <span class="tech-chip"><i class="fab fa-google"></i> Google Cloud</span>
+              <span class="tech-chip"><i class="fas fa-cloud"></i> Oracle Cloud</span>
+              <span class="tech-chip highlight"><i class="fas fa-triangle-exclamation"></i> Vercel</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Developer Tools & IoT -->
+          <div class="skill-category-card glass-panel reveal">
+            <div class="category-header">
+              <div class="cat-icon cat-cyan"><i class="fas fa-screwdriver-wrench"></i></div>
+              <h3>DevOps, Tools & IoT</h3>
+            </div>
+            <div class="skill-tag-cloud">
+              <span class="tech-chip highlight"><i class="fab fa-git-alt"></i> Git / GitHub</span>
+              <span class="tech-chip"><i class="fas fa-code"></i> VS Code</span>
+              <span class="tech-chip"><i class="fas fa-paper-plane"></i> Postman</span>
+              <span class="tech-chip"><i class="fas fa-chart-column"></i> Power BI</span>
+              <span class="tech-chip"><i class="fas fa-book"></i> Jupyter & Colab</span>
+              <span class="tech-chip"><i class="fas fa-microchip"></i> NodeMCU & Arduino</span>
+              <span class="tech-chip"><i class="fas fa-wifi"></i> IoT & Blynk</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Core Computer Science -->
+          <div class="skill-category-card glass-panel reveal">
+            <div class="category-header">
+              <div class="cat-icon cat-violet"><i class="fas fa-graduation-cap"></i></div>
+              <h3>Core CS Principles</h3>
+            </div>
+            <div class="skill-tag-cloud">
+              <span class="tech-chip"><i class="fas fa-diagram-project"></i> Data Structures & Algorithms</span>
+              <span class="tech-chip"><i class="fas fa-cube"></i> Object-Oriented Programming (OOP)</span>
+              <span class="tech-chip"><i class="fas fa-server"></i> Database Management Systems</span>
+              <span class="tech-chip"><i class="fas fa-gears"></i> Operating Systems</span>
+              <span class="tech-chip"><i class="fas fa-network-wired"></i> Computer Networks</span>
+              <span class="tech-chip"><i class="fas fa-calculator"></i> Mathematical Optimization</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         FEATURED PROJECTS (WITH LIVE SEARCH & FILTER)
+    ======================================================== -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        
+        <div class="section-heading text-center reveal">
+          <span class="section-tag"><i class="fas fa-laptop-code"></i> PORTFOLIO REPOSITORY</span>
+          <h2 class="section-title">Engineered <span>Solutions & Research</span></h2>
+          <p class="section-subtitle">Real-world AI systems, computer vision pipelines, full-stack platforms, and quantitative tools.</p>
+        </div>
+
+        <!-- Filter & Search Control Bar -->
+        <div class="project-controls-wrap reveal">
+          
+          <!-- Category Tabs -->
+          <div class="filter-tabs-group" id="filterTabs">
+            <button class="filter-tab active" data-filter="all"><i class="fas fa-border-all"></i> All (<span id="countAll">16</span>)</button>
+            <button class="filter-tab" data-filter="ml"><i class="fas fa-brain"></i> AI / ML</button>
+            <button class="filter-tab" data-filter="cv"><i class="fas fa-eye"></i> Computer Vision</button>
+            <button class="filter-tab" data-filter="web"><i class="fas fa-globe"></i> Full-Stack</button>
+            <button class="filter-tab" data-filter="automation"><i class="fas fa-gears"></i> Automation & Quant</button>
+            <button class="filter-tab" data-filter="iot"><i class="fas fa-microchip"></i> IoT</button>
+          </div>
+
+          <!-- Instant Search Box -->
+          <div class="project-search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="projectSearchInput" placeholder="Search by name, tech (e.g. Django, YOLO, LSTM)..." autocomplete="off">
+            <button id="clearSearchBtn" class="clear-search-btn" title="Clear Search"><i class="fas fa-xmark"></i></button>
+          </div>
+
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- 01 WorkFlow -->
+          <article class="project-card glass-panel" data-category="automation web" data-title="WorkFlow Intelligent Task Pipeline" data-tags="python automation django celery rest-api workflows">
+            <div class="project-header">
+              <span class="project-num">01 // AUTOMATION &amp; WORKFLOWS</span>
+              <span class="project-cat-badge">Automation</span>
+            </div>
+            <h3 class="project-title">⚡ WorkFlow — Pipeline & Task Orchestrator</h3>
+            <p class="project-description">
+              Intelligent automated workflow management and task execution system. Handles multi-stage task dependency graphs, automated background scheduling, status tracking, and error recovery pipelines to maximize process efficiency.
+            </p>
+            <div class="project-tech-stack">
+              <span>Python</span>
+              <span>Automation</span>
+              <span>REST APIs</span>
+              <span>Async Execution</span>
+              <span>Task Queues</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/WorkFlow" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/WorkFlow" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 02 Attendance System -->
+          <article class="project-card glass-panel" data-category="cv ml" data-title="Face Recognition Attendance System" data-tags="opencv deep-learning facenet biometric attendance python computer-vision">
+            <div class="project-header">
+              <span class="project-num">02 // COMPUTER VISION</span>
+              <span class="project-cat-badge">Vision AI</span>
+            </div>
+            <h3 class="project-title">👤 AI Biometric Attendance System</h3>
+            <p class="project-description">
+              Automated facial recognition attendance platform using OpenCV and deep feature embeddings. Features live face detection, anti-spoofing verification, real-time logging to databases, and automated CSV export for institutional management.
+            </p>
+            <div class="project-tech-stack">
+              <span>OpenCV</span>
+              <span>Deep Learning</span>
+              <span>FaceNet</span>
+              <span>Python</span>
+              <span>SQLite</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/Attendence-System" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/Attendence-System" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 03 Auto Ticket Categorizer -->
+          <article class="project-card glass-panel" data-category="ml automation" data-title="Auto Ticket Categorizer NLP" data-tags="nlp transformers scikit-learn classification tf-idf text-mining python">
+            <div class="project-header">
+              <span class="project-num">03 // NLP &amp; MACHINE LEARNING</span>
+              <span class="project-cat-badge">NLP / ML</span>
+            </div>
+            <h3 class="project-title">🎫 Auto Ticket Categorizer & Triage</h3>
+            <p class="project-description">
+              NLP-driven support ticket classification engine. Pre-processes unstructured customer inquiries using TF-IDF, tokenization, and transformer models to auto-assign priority, predict department routing, and accelerate customer resolution times.
+            </p>
+            <div class="project-tech-stack">
+              <span>NLP</span>
+              <span>Scikit-Learn</span>
+              <span>Transformers</span>
+              <span>Text Preprocessing</span>
+              <span>Python</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/Auto-Ticket-Categorizer" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/Auto-Ticket-Categorizer" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 04 Netflix ML -->
+          <article class="project-card glass-panel" data-category="ml" data-title="Netflix ML Recommender Engine" data-tags="recommendation-system collaborative-filtering scikit-learn pandas clustering machine-learning">
+            <div class="project-header">
+              <span class="project-num">04 // RECOMMENDATION SYSTEMS</span>
+              <span class="project-cat-badge">Machine Learning</span>
+            </div>
+            <h3 class="project-title">🎬 Netflix ML — Recommendation Engine</h3>
+            <p class="project-description">
+              Advanced content recommendation architecture leveraging collaborative filtering, cosine similarity matrices, and unsupervised clustering. Evaluates viewing behavior to recommend personalized films and trends with comprehensive analytics.
+            </p>
+            <div class="project-tech-stack">
+              <span>Recommendation Systems</span>
+              <span>Scikit-Learn</span>
+              <span>Pandas</span>
+              <span>Seaborn</span>
+              <span>Clustering</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/Netflix-ML" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/Netflix-ML" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 05 Trading Bot -->
+          <article class="project-card glass-panel" data-category="automation ml" data-title="Algorithmic Trading Bot Quant" data-tags="trading-bot algorithmic-trading technical-analysis rsi macd backtesting python">
+            <div class="project-header">
+              <span class="project-num">05 // QUANTITATIVE FINANCE</span>
+              <span class="project-cat-badge">Quant &amp; Bot</span>
+            </div>
+            <h3 class="project-title">📈 Algorithmic Quant Trading Bot</h3>
+            <p class="project-description">
+              Automated financial market trading bot executing technical indicator-based trading strategies (RSI, Moving Averages, MACD). Features risk management rules, position sizing, historical backtesting simulation, and automated trade signal dispatching.
+            </p>
+            <div class="project-tech-stack">
+              <span>Quantitative Finance</span>
+              <span>Technical Indicators</span>
+              <span>Backtesting</span>
+              <span>NumPy</span>
+              <span>Pandas</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/Trading-Bot" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/Trading-Bot" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 06 Clinical AI Django -->
+          <article class="project-card glass-panel" data-category="web ml" data-title="Clinical AI Django Healthcare Assistant" data-tags="django healthcare-ai medical-diagnosis python bootstrap full-stack ml">
+            <div class="project-header">
+              <span class="project-num">06 // HEALTHCARE AI &amp; WEB</span>
+              <span class="project-cat-badge">HealthTech</span>
+            </div>
+            <h3 class="project-title">🏥 Clinical AI — Medical Diagnostic Web Portal</h3>
+            <p class="project-description">
+              Healthcare diagnostic platform built with Django. Allows patients and doctors to input clinical symptoms and diagnostic metrics, running trained predictive models to deliver early disease risk assessments, report analytics, and triage recommendations.
+            </p>
+            <div class="project-tech-stack">
+              <span>Django</span>
+              <span>Python</span>
+              <span>Predictive ML</span>
+              <span>Bootstrap</span>
+              <span>SQLite</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/clinical-ai-django" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/clinical-ai-django" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 07 AirVerde -->
+          <article class="project-card glass-panel" data-category="ml iot web" data-title="AirVerde Environmental Air Quality Monitoring" data-tags="air-quality environment aqi iot sensor time-series forecasting python">
+            <div class="project-header">
+              <span class="project-num">07 // CLIMATETECH &amp; IOT</span>
+              <span class="project-cat-badge">GreenTech</span>
+            </div>
+            <h3 class="project-title">🌿 AirVerde — Air Quality & Pollution Intelligence</h3>
+            <p class="project-description">
+              Environmental monitoring system tracking Air Quality Index (AQI), PM2.5, PM10, and atmospheric parameters. Leverages time-series forecasting to predict pollution spikes and visualize eco-health insights on an interactive dashboard.
+            </p>
+            <div class="project-tech-stack">
+              <span>IoT &amp; Sensors</span>
+              <span>Time-Series ML</span>
+              <span>Python</span>
+              <span>Interactive Dashboard</span>
+              <span>AQI Models</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/AirVerde" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/AirVerde" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 08 Festiva -->
+          <article class="project-card glass-panel" data-category="web" data-title="Festiva Event Management Django" data-tags="django python sqlite html css chatbot full-stack event-management">
+            <div class="project-header">
+              <span class="project-num">08 // FULL-STACK WEB</span>
+              <span class="project-cat-badge">Full-Stack</span>
+            </div>
+            <h3 class="project-title">🎉 Festiva — Enterprise Event Platform</h3>
+            <p class="project-description">
+              Comprehensive Django event management ecosystem featuring multi-role authentication, booking engine, custom templates for conferences and weddings, integrated chatbot assistant, and media asset pipelines.
+            </p>
+            <div class="project-tech-stack">
+              <span>Django</span>
+              <span>Python</span>
+              <span>HTML5 / CSS3</span>
+              <span>SQLite</span>
+              <span>Chatbot</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/Festiva-Manage-Your-Events" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/Festiva-Manage-Your-Events" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 09 Diabetes Prediction -->
+          <article class="project-card glass-panel" data-category="ml" data-title="Diabetes Risk Prediction ML Streamlit" data-tags="streamlit scikit-learn pima-dataset health-ml pandas jupyter">
+            <div class="project-header">
+              <span class="project-num">09 // HEALTHCARE ANALYTICS</span>
+              <span class="project-cat-badge">Machine Learning</span>
+            </div>
+            <h3 class="project-title">🩺 Diabetes Risk Prediction System</h3>
+            <p class="project-description">
+              Supervised clinical ML model forecasting diabetes probability from clinical biomarkers (PIMA dataset). Packaged into a responsive Streamlit application featuring instant inference, probability curves, and feature importance analysis.
+            </p>
+            <div class="project-tech-stack">
+              <span>Scikit-Learn</span>
+              <span>Streamlit</span>
+              <span>Pandas</span>
+              <span>Matplotlib</span>
+              <span>Jupyter</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/prediction-of-diabetes" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/prediction-of-diabetes" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 10 Soil Moisture & Crop Selection -->
+          <article class="project-card glass-panel" data-category="ml iot" data-title="Smart Soil Checking Crop Prediction" data-tags="lstm cnn-lstm random-forest agritech deep-learning tensorflow">
+            <div class="project-header">
+              <span class="project-num">10 // AGRITECH &amp; DEEP LEARNING</span>
+              <span class="project-cat-badge">Deep Learning</span>
+            </div>
+            <h3 class="project-title">🌱 Smart Soil & Crop Recommender (LSTM)</h3>
+            <p class="project-description">
+              Dual-architecture agricultural intelligence model. Employs CNN-LSTM networks to predict temporal soil moisture patterns alongside Random Forest classifiers to recommend optimal crops based on NPK nutrients and weather conditions.
+            </p>
+            <div class="project-tech-stack">
+              <span>LSTM &amp; CNN-LSTM</span>
+              <span>TensorFlow</span>
+              <span>Random Forest</span>
+              <span>Scikit-Learn</span>
+              <span>IoT Analytics</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/soil-checking-and-prediction" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/soil-checking-and-prediction" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 11 Jarvis AI Assistant -->
+          <article class="project-card glass-panel" data-category="automation ml" data-title="Jarvis AI Voice Assistant" data-tags="voice-assistant speech-recognition openai-api python desktop-automation">
+            <div class="project-header">
+              <span class="project-num">11 // VOICE AI &amp; AUTOMATION</span>
+              <span class="project-cat-badge">GenAI Assistant</span>
+            </div>
+            <h3 class="project-title">🤖 JarvisAI — Voice-Driven Desktop Companion</h3>
+            <p class="project-description">
+              Voice-controlled intelligent assistant integrating SpeechRecognition, Windows SAPI TTS, and OpenAI API. Executes hands-free web research, controls media players, launches applications, and queries knowledge graphs conversationally.
+            </p>
+            <div class="project-tech-stack">
+              <span>Python</span>
+              <span>SpeechRecognition</span>
+              <span>OpenAI API</span>
+              <span>pyttsx3</span>
+              <span>System Automation</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/JarvisAI" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/JarvisAI" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 12 Live Object Detection YOLOv3 -->
+          <article class="project-card glass-panel" data-category="cv" data-title="Live Object Detection OpenCV YOLOv3" data-tags="yolov3 opencv real-time video-stream deep-learning computer-vision">
+            <div class="project-header">
+              <span class="project-num">12 // COMPUTER VISION</span>
+              <span class="project-cat-badge">Computer Vision</span>
+            </div>
+            <h3 class="project-title">🎯 Real-Time Object Detection (YOLOv3)</h3>
+            <p class="project-description">
+              Low-latency computer vision pipeline engineered with OpenCV and YOLOv3. Applies non-maximum suppression (NMS) and custom confidence thresholds for high-accuracy multi-class object tracking on live webcam streams.
+            </p>
+            <div class="project-tech-stack">
+              <span>YOLOv3</span>
+              <span>OpenCV</span>
+              <span>Python</span>
+              <span>DNN Module</span>
+              <span>Edge Optimization</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/Live-Object-Detection---OpenCV" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/Live-Object-Detection---OpenCV" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 13 OMR Sheet Evaluation -->
+          <article class="project-card glass-panel" data-category="cv" data-title="OMR Sheet Auto Evaluation OpenCV" data-tags="omr opencv image-processing contour-detection automation python">
+            <div class="project-header">
+              <span class="project-num">13 // COMPUTER VISION &amp; AUTOMATION</span>
+              <span class="project-cat-badge">Image Processing</span>
+            </div>
+            <h3 class="project-title">📝 OMR Sheet Auto-Grading System</h3>
+            <p class="project-description">
+              Robust document image processing pipeline that isolates bubble matrices, perspective-corrects scanning skew, compares marked contours against an answer key, and evaluates exam scores in under 500ms.
+            </p>
+            <div class="project-tech-stack">
+              <span>OpenCV</span>
+              <span>Perspective Warping</span>
+              <span>Contour Detection</span>
+              <span>Python</span>
+              <span>NumPy</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/OMR-checking" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/OMR-checking" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 14 Road Lane Detection -->
+          <article class="project-card glass-panel" data-category="cv ml" data-title="AI Road Lane Detection Autonomous" data-tags="lane-detection autonomous-driving opencv hough-transform deep-learning">
+            <div class="project-header">
+              <span class="project-num">14 // AUTONOMOUS DRIVING</span>
+              <span class="project-cat-badge">Autonomous AI</span>
+            </div>
+            <h3 class="project-title">🚗 Autonomous Road Lane Detection</h3>
+            <p class="project-description">
+              Vision-based lane tracking model developed during the Pinnacle internship. Blends Hough line transforms, region-of-interest masking, and deep learning filters to trace vehicular lanes under challenging shadows and lighting.
+            </p>
+            <div class="project-tech-stack">
+              <span>OpenCV</span>
+              <span>Hough Transforms</span>
+              <span>Deep Learning</span>
+              <span>Python</span>
+              <span>Self-Driving</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/road_lane" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/road_lane" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 15 EDA Dashboard -->
+          <article class="project-card glass-panel" data-category="ml web" data-title="EDA Dashboard Gradio CSV" data-tags="eda gradio data-visualization analytics pandas python">
+            <div class="project-header">
+              <span class="project-num">15 // DATA ANALYTICS &amp; TOOLING</span>
+              <span class="project-cat-badge">Analytics</span>
+            </div>
+            <h3 class="project-title">📊 EDA Dashboard — Automated CSV Explorer</h3>
+            <p class="project-description">
+              Zero-code interactive exploratory data analysis web application. Users upload any tabular dataset to instantly generate correlation matrices, missing value distributions, statistical outlier detection, and exportable charts.
+            </p>
+            <div class="project-tech-stack">
+              <span>Gradio</span>
+              <span>Pandas</span>
+              <span>Seaborn</span>
+              <span>Matplotlib</span>
+              <span>Python</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28/EDA_Dashboard" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28/EDA_Dashboard" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+          <!-- 16 Smart Water Level -->
+          <article class="project-card glass-panel" data-category="iot" data-title="Smart Water Level Monitoring IoT Blynk" data-tags="nodemcu iot blynk arduino-c ultrasonic sensor-networks">
+            <div class="project-header">
+              <span class="project-num">16 // EMBEDDED &amp; IOT</span>
+              <span class="project-cat-badge">IoT Systems</span>
+            </div>
+            <h3 class="project-title">💧 Smart Water Level Monitoring & Control</h3>
+            <p class="project-description">
+              Connected IoT hardware system powered by NodeMCU and ultrasonic sensors linked with Blynk Cloud. Delivers mobile alerts, real-time reservoir metrics, automated pump switching, and water conservation analytics.
+            </p>
+            <div class="project-tech-stack">
+              <span>NodeMCU</span>
+              <span>Blynk Cloud</span>
+              <span>C / C++</span>
+              <span>Ultrasonic Sensors</span>
+              <span>Relay Actuation</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/avijit-28" target="_blank" rel="noopener noreferrer" class="btn-proj-code">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://github.com/avijit-28" target="_blank" rel="noopener noreferrer" class="btn-proj-demo">
+                <i class="fas fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- No Results Fallback -->
+        <div id="noProjectsMatch" class="no-results-box" style="display:none;">
+          <i class="fas fa-magnifying-glass"></i>
+          <h3>No matching projects found</h3>
+          <p>Try searching for a different keyword or select another category filter above.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         INDUSTRY EXPERIENCE
+    ======================================================== -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        
+        <div class="section-heading text-center reveal">
+          <span class="section-tag"><i class="fas fa-briefcase"></i> CAREER TRAJECTORY</span>
+          <h2 class="section-title">Industry <span>Experience</span></h2>
+          <p class="section-subtitle">Real-world engineering contributions across AI research, computer vision, and backend development.</p>
+        </div>
+
+        <div class="timeline-container">
+
+          <!-- Item 1: Edunet / TechSaksham -->
+          <div class="timeline-card glass-panel reveal">
+            <div class="tl-badge"><i class="fas fa-robot"></i></div>
+            <div class="tl-content">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">AI/ML Engineer Intern — TechSaksham Program</h3>
+                  <span class="tl-company"><i class="fas fa-building"></i> Edunet Foundation (Microsoft & SAP CSR Initiative)</span>
+                </div>
+                <span class="tl-badge-date">2024</span>
+              </div>
+              <p class="tl-desc">
+                Engineered real-time computer vision and object detection pipelines leveraging YOLOv3 and OpenCV. Optimized algorithmic preprocessing and frame throughput, reducing inference latency by <strong>20%</strong>. Mentored 15+ peers in neural network fundamentals and edge deployment.
+              </p>
+              <div class="tl-tech-row">
+                <span class="tl-tag">YOLOv3</span>
+                <span class="tl-tag">OpenCV</span>
+                <span class="tl-tag">Deep Learning</span>
+                <span class="tl-tag">Edge AI</span>
+                <span class="tl-tag">Python</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Virtunexa -->
+          <div class="timeline-card glass-panel reveal">
+            <div class="tl-badge"><i class="fas fa-code"></i></div>
+            <div class="tl-content">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">Python Developer Intern</h3>
+                  <span class="tl-company"><i class="fas fa-building"></i> Virtunexa</span>
+                </div>
+                <span class="tl-badge-date">2024</span>
+              </div>
+              <p class="tl-desc">
+                Developed speech-enabled productivity assistants, automated log-based student grading utilities, and real-time news extraction scrapers. Improved internal software tool execution speeds by <strong>35%</strong> and modularized reusable Python service layers.
+              </p>
+              <div class="tl-tech-row">
+                <span class="tl-tag">Python</span>
+                <span class="tl-tag">Speech API</span>
+                <span class="tl-tag">Web Scraping</span>
+                <span class="tl-tag">Automation</span>
+                <span class="tl-tag">Flask</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Pinnacle -->
+          <div class="timeline-card glass-panel reveal">
+            <div class="tl-badge"><i class="fas fa-car"></i></div>
+            <div class="tl-content">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">Data Science & Vision Intern</h3>
+                  <span class="tl-company"><i class="fas fa-building"></i> Pinnacle</span>
+                </div>
+                <span class="tl-badge-date">2024</span>
+              </div>
+              <p class="tl-desc">
+                Researched and built AI road lane detection architectures for autonomous vehicle simulations. Implemented Hough mathematical transforms alongside convolutional filtering to deliver consistent lane tracking in low-light and noisy road conditions.
+              </p>
+              <div class="tl-tech-row">
+                <span class="tl-tag">Data Science</span>
+                <span class="tl-tag">Computer Vision</span>
+                <span class="tl-tag">TensorFlow</span>
+                <span class="tl-tag">Autonomous Systems</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         RESEARCH & PUBLICATIONS
+    ======================================================== -->
+    <section id="research" class="section research-section">
+      <div class="container">
+        
+        <div class="section-heading text-center reveal">
+          <span class="section-tag"><i class="fas fa-flask"></i> ACADEMIC CONTRIBUTIONS</span>
+          <h2 class="section-title">Research & <span>Global Publications</span></h2>
+          <p class="section-subtitle">Bridging mathematical principles with modern deep learning and AgriTech solutions.</p>
+        </div>
+
+        <div class="research-grid">
+
+          <!-- Research Paper 1 -->
+          <div class="research-card glass-panel reveal">
+            <div class="res-type-badge"><i class="fas fa-scroll"></i> SPRINGER INDEXED // RESEARCH PAPER</div>
+            <h3 class="res-title">Vedic Mathematics + Karatsuba Algorithm for Efficient Face Recognition</h3>
+            <div class="res-venue">
+              <i class="fas fa-book-bookmark text-cyan"></i> Final Publication 2026 · Springer Indexed · ISBN Conference (Abstract Accepted)
+            </div>
+            <p class="res-abstract">
+              This research proposes a novel paradigm that merges ancient Indian Vedic mathematical sutras (notably Urdhva Tiryagbhyam and Karatsuba fast-multiplication) directly into the arithmetic computational kernels of Convolutional Neural Networks. By minimizing multiplication bottlenecks during high-dimensional convolution operations, the architecture yields notable speedups in biometric face verification and low-power hardware edge deployment.
+            </p>
+            <div class="res-tags">
+              <span class="res-chip">CNN Acceleration</span>
+              <span class="res-chip">Vedic Mathematics</span>
+              <span class="res-chip">Karatsuba Multiplication</span>
+              <span class="res-chip">Face Recognition</span>
+              <span class="res-chip">Biometrics</span>
+            </div>
+          </div>
+
+          <!-- Research Paper 2 -->
+          <div class="research-card glass-panel reveal">
+            <div class="res-type-badge"><i class="fas fa-earth-americas"></i> SPRINGER PROCEEDINGS // icSoftComp2024</div>
+            <h3 class="res-title">Precision Agriculture with ML: Soil Moisture & Crop Selection Optimization</h3>
+            <div class="res-venue">
+              <i class="fas fa-location-dot text-amber"></i> icSoftComp2024 · Bangkok, Thailand · Springer Proceedings · CHARUSAT International
+            </div>
+            <p class="res-abstract">
+              Co-authored an empirical machine learning pipeline for sustainable agriculture and resource preservation. Evaluates multi-depth soil moisture sensor inputs with recurrent neural modeling to predict upcoming depletion windows, while ensemble algorithms (Random Forest, Decision Trees) map microclimate metrics to the highest-yielding crop recommendations. Presented at the prestigious CHARUSAT international conference in Bangkok.
+            </p>
+            <div class="res-tags">
+              <span class="res-chip">AgriTech</span>
+              <span class="res-chip">LSTM / Recurrent Nets</span>
+              <span class="res-chip">Soil Moisture Prediction</span>
+              <span class="res-chip">Ensemble ML</span>
+              <span class="res-chip">Bangkok Conference</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         EDUCATION & CERTIFICATIONS
+    ======================================================== -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        
+        <div class="section-heading text-center reveal">
+          <span class="section-tag"><i class="fas fa-graduation-cap"></i> SCHOLASTIC FOUNDATION</span>
+          <h2 class="section-title">Education & <span>Credentials</span></h2>
+          <p class="section-subtitle">Consistent academic distinction and industry-recognized professional certifications.</p>
+        </div>
+
+        <div class="edu-grid">
+          
+          <!-- Education Timeline -->
+          <div class="edu-column reveal">
+            <h3 class="column-subtitle"><i class="fas fa-building-columns text-cyan"></i> Formal Education</h3>
+
+            <div class="edu-card glass-panel">
+              <div class="edu-header">
+                <span class="edu-degree">B.Tech in Computer Science & Engineering</span>
+                <span class="edu-year">2022 — 2026</span>
+              </div>
+              <div class="edu-inst">JIS University, Kolkata, West Bengal</div>
+              <div class="edu-specialization">Specialization: Artificial Intelligence & Machine Learning</div>
+              <div class="edu-grade-box">
+                <span class="grade-label">Cumulative GPA:</span>
+                <span class="grade-score text-cyan font-mono">9.41 / 10.0</span>
+                <span class="grade-badge">Top Tier</span>
+              </div>
+              <p class="edu-coursework">
+                <strong>Key Coursework:</strong> Deep Learning, Computer Vision, Artificial Intelligence, Data Structures & Algorithms, Operating Systems, Database Management Systems, Computer Networks, Software Engineering.
+              </p>
+            </div>
+
+            <div class="edu-card glass-panel">
+              <div class="edu-header">
+                <span class="edu-degree">Higher Secondary (Class XII) — Science</span>
+                <span class="edu-year">2021</span>
+              </div>
+              <div class="edu-inst">Kendriya Vidyalaya (ARMY), Barrackpore</div>
+              <div class="edu-grade-box">
+                <span class="grade-label">Aggregate:</span>
+                <span class="grade-score font-mono">85.8%</span>
+              </div>
+            </div>
+
+            <div class="edu-card glass-panel">
+              <div class="edu-header">
+                <span class="edu-degree">Secondary Examination (Class X)</span>
+                <span class="edu-year">2019</span>
+              </div>
+              <div class="edu-inst">Kendriya Vidyalaya (ARMY), Barrackpore</div>
+              <div class="edu-grade-box">
+                <span class="grade-label">Aggregate:</span>
+                <span class="grade-score font-mono">83.6%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications Grid -->
+          <div class="certs-column reveal">
+            <h3 class="column-subtitle"><i class="fas fa-award text-violet"></i> Professional Certifications</h3>
+
+            <div class="certs-list">
+              <div class="cert-card glass-panel">
+                <div class="cert-icon-wrap oracle"><i class="fas fa-brain"></i></div>
+                <div class="cert-details">
+                  <h4>Oracle Generative AI Certified Professional</h4>
+                  <span class="cert-issuer">Oracle Cloud Infrastructure</span>
+                </div>
+              </div>
+
+              <div class="cert-card glass-panel">
+                <div class="cert-icon-wrap prompt"><i class="fas fa-wand-magic-sparkles"></i></div>
+                <div class="cert-details">
+                  <h4>Advanced Prompt Engineering Specialization</h4>
+                  <span class="cert-issuer">DeepLearning.AI / Industry Program</span>
+                </div>
+              </div>
+
+              <div class="cert-card glass-panel">
+                <div class="cert-icon-wrap java"><i class="fab fa-java"></i></div>
+                <div class="cert-details">
+                  <h4>Programming In Java (NPTEL Elite)</h4>
+                  <span class="cert-issuer">Indian Institute of Technology (IIT)</span>
+                </div>
+              </div>
+
+              <div class="cert-card glass-panel">
+                <div class="cert-icon-wrap ai"><i class="fas fa-microchip"></i></div>
+                <div class="cert-details">
+                  <h4>AI / Machine Learning Fundamentals</h4>
+                  <span class="cert-issuer">TechSaksham / Edunet (Microsoft & SAP)</span>
+                </div>
+              </div>
+
+              <div class="cert-card glass-panel">
+                <div class="cert-icon-wrap python"><i class="fab fa-python"></i></div>
+                <div class="cert-details">
+                  <h4>Python Development Specialization</h4>
+                  <span class="cert-issuer">Virtunexa</span>
+                </div>
+              </div>
+
+              <div class="cert-card glass-panel">
+                <div class="cert-icon-wrap ds"><i class="fas fa-chart-line"></i></div>
+                <div class="cert-details">
+                  <h4>Data Science & Analytical Methods</h4>
+                  <span class="cert-issuer">Pinnacle</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CONTACT SECTION
+    ======================================================== -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        
+        <div class="contact-card-box glass-panel reveal">
+          <div class="contact-inner">
+            
+            <span class="section-tag"><i class="fas fa-envelope"></i> GET IN TOUCH</span>
+            <h2 class="contact-title">Let's Build Something <span class="hero-gradient-text">Extraordinary</span></h2>
+            <p class="contact-subtitle">
+              Whether you are looking to hire a dedicated AI/ML engineer, collaborate on cutting-edge research, or discuss high-scale engineering challenges — my inbox is always open.
+            </p>
+
+            <div class="contact-action-grid">
+              
+              <a href="mailto:avijitpakhira2807@gmail.com" class="contact-tile">
+                <div class="ct-icon"><i class="fas fa-envelope"></i></div>
+                <div class="ct-text">
+                  <span class="ct-label">EMAIL ME</span>
+                  <span class="ct-value">avijitpakhira2807@gmail.com</span>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square ct-arrow"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/avijit-pakhira-8541841ba" target="_blank" rel="noopener noreferrer" class="contact-tile">
+                <div class="ct-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div class="ct-text">
+                  <span class="ct-label">LINKEDIN</span>
+                  <span class="ct-value">avijit-pakhira-8541841ba</span>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square ct-arrow"></i>
+              </a>
+
+              <a href="https://github.com/avijit-28" target="_blank" rel="noopener noreferrer" class="contact-tile">
+                <div class="ct-icon"><i class="fab fa-github"></i></div>
+                <div class="ct-text">
+                  <span class="ct-label">GITHUB REPOSITORIES</span>
+                  <span class="ct-value">github.com/avijit-28</span>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square ct-arrow"></i>
+              </a>
+
+              <a href="tel:+917044419685" class="contact-tile">
+                <div class="ct-icon"><i class="fas fa-phone"></i></div>
+                <div class="ct-text">
+                  <span class="ct-label">TELEPHONE / WHATSAPP</span>
+                  <span class="ct-value">+91 70444 19685</span>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square ct-arrow"></i>
+              </a>
+
+            </div>
+
+            <div class="contact-footer-actions">
+              <a href="mailto:avijitpakhira2807@gmail.com" class="btn-primary">
+                <i class="fas fa-paper-plane"></i> Send Direct Message
+              </a>
+              <button id="copyEmailBtn" class="btn-secondary">
+                <i class="fas fa-copy"></i> Copy Email Address
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       FOOTER
+  ======================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="logo-badge">AP</span>
+        <span class="footer-brand-name">AVIJIT PAKHIRA</span>
+        <span class="footer-copy">© 2026 · AI &amp; Deep Learning Researcher · Designed for Vercel</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Top</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/avijit-28" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/avijit-pakhira-8541841ba" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       COMMAND PALETTE MODAL (CTRL+K)
+  ======================================================== -->
+  <div id="cmdPaletteModal" class="cmd-modal-backdrop">
+    <div class="cmd-modal glass-panel">
+      <div class="cmd-input-wrap">
+        <i class="fas fa-search"></i>
+        <input type="text" id="cmdInput" placeholder="Type a section or project to jump (e.g. 'Projects', 'Trading', 'Research')..." autocomplete="off">
+        <button id="cmdCloseBtn" class="cmd-close"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="cmd-results" id="cmdResults">
+        <div class="cmd-group-label">Quick Jump</div>
+        <div class="cmd-item" data-action="goto" data-target="hero"><i class="fas fa-house"></i> Home Section</div>
+        <div class="cmd-item" data-action="goto" data-target="about"><i class="fas fa-user"></i> About &amp; Profile</div>
+        <div class="cmd-item" data-action="goto" data-target="skills"><i class="fas fa-brain"></i> Technical Skills Matrix</div>
+        <div class="cmd-item" data-action="goto" data-target="projects"><i class="fas fa-cubes"></i> Featured Projects (16)</div>
+        <div class="cmd-item" data-action="goto" data-target="experience"><i class="fas fa-briefcase"></i> Work Experience</div>
+        <div class="cmd-item" data-action="goto" data-target="research"><i class="fas fa-flask"></i> Springer Publications</div>
+        <div class="cmd-item" data-action="goto" data-target="education"><i class="fas fa-graduation-cap"></i> Education &amp; 9.41 CGPA</div>
+        <div class="cmd-item" data-action="goto" data-target="contact"><i class="fas fa-envelope"></i> Contact &amp; Links</div>
+        <div class="cmd-group-label">Direct Actions</div>
+        <div class="cmd-item" data-action="resume"><i class="fas fa-file-pdf"></i> Download Official Resume</div>
+        <div class="cmd-item" data-action="copy-email"><i class="fas fa-copy"></i> Copy Email to Clipboard</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Auxiliary Controls -->
+  <div class="floating-controls">
+    <button id="autoScrollToggle" class="floating-btn" title="Toggle Auto-Scroll">
+      <i class="fas fa-play"></i>
+    </button>
+    <button id="backToTopBtn" class="floating-btn" title="Scroll To Top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastNotification" class="toast-notification"></div>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
